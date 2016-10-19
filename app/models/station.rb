@@ -24,6 +24,18 @@ class Station
     data[:street_address]
   end
 
+  def city
+    data[:city]
+  end
+
+  def state
+    data[:state]
+  end
+
+  def full_address
+    "#{address}, #{city} #{state}"
+  end
+
   def self.by_location(location)
     NRELService.by_location(location).map do |raw_station|
       Station.new(raw_station)

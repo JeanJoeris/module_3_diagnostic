@@ -8,7 +8,7 @@ describe "NREL API Service" do
       result_stations = NRELService.by_location(zipcode)
       first_station = result_stations.first
 
-      expect(first_station[:address]).to eq("800 Acoma St")
+      expect(first_station[:street_address]).to eq("800 Acoma St")
       expect(result_stations.count).to eq(10)
       result_stations.each do |station|
         expect(station[:distance]).to be < 6.0

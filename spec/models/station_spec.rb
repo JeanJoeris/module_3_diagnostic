@@ -16,4 +16,14 @@ describe Station, type: :model do
     expect(station.distance).to eq(1.2)
     expect(station.address).to eq("Your Garage")
   end
+
+  it "has a full address" do
+    station = Station.new({
+      street_address: "123 Street",
+      city: "Denver",
+      state: "CO"
+    })
+
+    expect(station.full_address).to eq("123 Street, Denver CO")
+  end
 end
