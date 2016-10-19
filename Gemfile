@@ -14,7 +14,16 @@ group :development, :test do
   gem 'byebug'
 end
 
+group :test do
+  gem 'rspec-rails'
+  gem 'faraday'
+  gem 'figaro'
+  gem 'vcr'
+  gem 'pry-rails'
+  gem 'factory_girl_rails'
+  gem 'webmock'
+end
+
 group :development do
   gem 'web-console', '~> 2.0'
 end
-
