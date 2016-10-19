@@ -24,6 +24,12 @@ class Station
     data[:street_address]
   end
 
+  def self.by_location(location)
+    NRELService.by_location(location).map do |raw_station|
+      Station.new(raw_station)
+    end
+  end
+
   private
     attr_reader :data
 end

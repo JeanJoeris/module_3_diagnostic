@@ -21,7 +21,7 @@ describe "Search for alt-fuel stations" do
       10.times do |i|
         within("div#station-#{i}") do
           expect(page).to have_content("#{i + 1}) -")
-          expect(page).to (have_content("Fuel type: ELEC") || have_content("Fuel type: LPG"))
+          expect(page).to (have_content("Fuel type: Electric") || have_content("Fuel type: Propane"))
           expect(page).to have_content("Name")
           expect(page).to have_content("Address")
           expect(page).to have_content("Distance")

@@ -3,10 +3,10 @@
 <% @stations.each_with_index do |station, i| %>
   <div id=<%= "station-#{i}" %>>
     <h3><%= "#{i + 1}) -" %></h3>
-    <h4>Name: <%= station[:station_name] %></h4>
-    <h4>Address: <%= station[:street_address] %></h4>
-    <h4>Fuel type: <%= station[:fuel_type_code] %></h4>
-    <h4>Distance: <%= station[:distance] %></h4>
-    <h4>Access Times: <%= station[:access_days_time] %></h4>
+    <h4>Name: <%= station.name %></h4>
+    <h4>Address: <%= station.address %></h4>
+    <h4>Fuel type: <%= station.fuel_type %></h4>
+    <h4>Distance: <%= station.distance %></h4>
+    <h4>Access Times: <%= station.hours %></h4>
   </div>
 <% end %>
