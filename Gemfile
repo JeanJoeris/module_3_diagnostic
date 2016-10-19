@@ -23,6 +23,7 @@ group :test do
   gem 'pry-rails'
   gem 'factory_girl_rails'
   gem 'webmock'
+  gem 'launchy'
 end
 
 group :development do
