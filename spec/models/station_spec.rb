@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe Station, type: :model do
   it "has name, distance, fuel type, hours, and address" do
