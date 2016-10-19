@@ -18,14 +18,15 @@ describe "Search for alt-fuel stations" do
       click_on "Locate"
 
       expect(current_path).to eq("/search")
+
       10.times do |i|
         within("div#station-#{i}") do
           expect(page).to have_content("#{i + 1}) -")
           expect(page).to (have_content("Fuel type: Electric") || have_content("Fuel type: Propane"))
-          expect(page).to have_content("Name")
-          expect(page).to have_content("Address")
-          expect(page).to have_content("Distance")
-          expect(page).to have_content("Access Times")
+          expect(page).to have_content("Name:")
+          expect(page).to have_content("Address:")
+          expect(page).to have_content("Distance:")
+          expect(page).to have_content("Access Times:")
         end
       end
     end
