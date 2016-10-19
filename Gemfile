@@ -15,6 +15,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'capybara'
   gem 'rspec-rails'
   gem 'faraday'
   gem 'figaro'
